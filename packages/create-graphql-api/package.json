@@ -1,0 +1,13 @@
+{
+  "name": "create-graphql-api",
+  "version": "1.0.0",
+  "license": "MIT",
+  "bin": {
+    "create-graphql-api": "./src/index.js"
+  },
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "commander": "^4.0.1",
+    "fs-extra": "^8.1.0"
+  }
+}
