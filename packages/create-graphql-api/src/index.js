@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 const commander = require("commander");
 const chalk = require("chalk");
+const execSync = require("child_process").execSync;
 const packageJson = require("../package.json");
 const fs = require("fs-extra");
 const path = require("path");
@@ -32,9 +33,29 @@ if (typeof projectName === "undefined") {
   // );
   process.exit(1);
 }
-if (fs.existsSync(path.join(process.cwd(), projectName))) {
+
+const projectDestination = path.join(process.cwd(), projectName);
+
+if (fs.existsSync(projectDestination)) {
   console.log(`The directory ${chalk.green(projectName)} already exists.`);
   process.exit(1);
 }
 
-fs.copySync("../main-template", projectName);
+fs.copySync(path.join(__dirname, "..", "main-template"), projectName);
+
+function shouldUseYarn() {
+  try {
+    execSync("yarn --version", { stdio: "ignore" });
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+process.chdir(projectDestination);
+
+if (shouldUseYarn()) {
+  execSync("yarn install", { stdio: [0, 1, 2] });
+} else {
+  execSync("npm install", { stdio: [0, 1, 2] });
+}

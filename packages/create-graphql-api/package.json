@@ -1,9 +1,17 @@
 {
   "name": "create-graphql-api",
-  "version": "1.0.0",
+  "version": "1.0.11",
   "license": "MIT",
+  "files": [
+    "main-template",
+    "src/index.js"
+  ],
   "bin": {
     "create-graphql-api": "./src/index.js"
+  },
+  "scripts": {
+    "prepublishOnly": "cp -R ../main-template .",
+    "postpublish": "rm -rf main-template"
   },
   "dependencies": {
     "chalk": "^3.0.0",
