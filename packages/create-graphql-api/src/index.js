@@ -63,6 +63,12 @@ new sqlite3.Database(
 
     process.chdir(projectDestination);
 
+    fs.writeFileSync(
+      ".gitignore",
+      `node_modules
+database.sqlite`
+    );
+
     if (shouldUseYarn()) {
       execSync("yarn install", { stdio: [0, 1, 2] });
     } else {
