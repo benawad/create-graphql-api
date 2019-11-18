@@ -1,6 +1,16 @@
 {
   "name": "create-graphql-api",
-  "version": "1.0.11",
+  "description": "Set up a Typescript GraphQL API by running one command.",
+  "author": "Ben Awad",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benawad/create-graphql-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/benawad/create-graphql-api/issues"
+  },
+  "homepage": "https://github.com/benawad/create-graphql-api#readme",
+  "version": "1.0.12",
   "license": "MIT",
   "files": [
     "main-template",
