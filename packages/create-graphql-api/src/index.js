@@ -5,7 +5,6 @@ const execSync = require("child_process").execSync;
 const packageJson = require("../package.json");
 const fs = require("fs-extra");
 const path = require("path");
-const sqlite3 = require("sqlite3");
 
 let projectName;
 
@@ -53,26 +52,20 @@ function shouldUseYarn() {
   }
 }
 
-new sqlite3.Database(
-  path.join(__dirname, "..", "main-template", "./database.sqlite"),
-  sqlite3.OPEN_READWRITE | sqlite3.OPEN_CREATE,
-  err => {
-    if (err) {
-      console.log("Error creating sqlite database: ", err);
-    }
+if (err) {
+  console.log("Error creating sqlite database: ", err);
+}
 
-    process.chdir(projectDestination);
+process.chdir(projectDestination);
 
-    fs.writeFileSync(
-      ".gitignore",
-      `node_modules
+fs.writeFileSync(
+  ".gitignore",
+  `node_modules
 database.sqlite`
-    );
-
-    if (shouldUseYarn()) {
-      execSync("yarn install", { stdio: [0, 1, 2] });
-    } else {
-      execSync("npm install", { stdio: [0, 1, 2] });
-    }
-  }
 );
+
+if (shouldUseYarn()) {
+  execSync("yarn install", { stdio: [0, 1, 2] });
+} else {
+  execSync("npm install", { stdio: [0, 1, 2] });
+}
