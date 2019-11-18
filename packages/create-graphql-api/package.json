@@ -10,7 +10,7 @@
     "url": "https://github.com/benawad/create-graphql-api/issues"
   },
   "homepage": "https://github.com/benawad/create-graphql-api#readme",
-  "version": "1.0.17",
+  "version": "1.0.18",
   "license": "MIT",
   "files": [
     "main-template",

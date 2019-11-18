@@ -52,10 +52,6 @@ function shouldUseYarn() {
   }
 }
 
-if (err) {
-  console.log("Error creating sqlite database: ", err);
-}
-
 process.chdir(projectDestination);
 
 fs.writeFileSync(
