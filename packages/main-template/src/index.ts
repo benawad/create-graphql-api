@@ -8,7 +8,9 @@ import { HelloWorldResolver } from "./resolvers/HelloWorldResolver";
 (async () => {
   const app = express();
 
-  const options = await getConnectionOptions(process.env.NODE_ENV);
+  const options = await getConnectionOptions(
+    process.env.NODE_ENV || "development"
+  );
   await createConnection({ ...options, name: "default" });
 
   const apolloServer = new ApolloServer({
@@ -19,8 +21,8 @@ import { HelloWorldResolver } from "./resolvers/HelloWorldResolver";
   });
 
   apolloServer.applyMiddleware({ app, cors: false });
-
-  app.listen(process.env.PORT || 4000, () => {
-    console.log("express server started");
+  const port = process.env.PORT || 4000;
+  app.listen(port, () => {
+    console.log(`server started at http://localhost:${port}`);
   });
 })();
