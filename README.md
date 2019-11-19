@@ -30,7 +30,7 @@ heroku create
 ```
 heroku addons:create postgres
 ```
-6. Push your code to Heroku
+6. Commit your code and push to Heroku
 ```
 git push heroku master
 ```
