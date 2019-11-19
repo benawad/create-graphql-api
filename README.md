@@ -35,4 +35,5 @@ heroku addons:create heroku-postgresql
 git push heroku master
 ```
 
+Note: You'll want to look at your `ormconfig.js` and configure the options you want for production.
 
