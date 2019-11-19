@@ -57,6 +57,7 @@ process.chdir(projectDestination);
 fs.writeFileSync(
   ".gitignore",
   `node_modules
+dist
 database.sqlite`
 );
 
