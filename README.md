@@ -12,6 +12,7 @@ https://www.youtube.com/watch?v=WhzIjYQmWvs
 
 ## How to Deploy to Heroku
 
+0. Make sure you have Git setup
 1. Setup Heroku CLI: https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up
 2. Create a `Procfile` in the root folder of your project and put the following in it:
 ```
