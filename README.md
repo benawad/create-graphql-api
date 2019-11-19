@@ -28,7 +28,7 @@ heroku create
 ```
 5. Add a PostgreSQL database addon
 ```
-heroku addons:create postgres
+heroku addons:create heroku-postgresql
 ```
 6. Commit your code and push to Heroku
 ```
