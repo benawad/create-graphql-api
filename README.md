@@ -17,7 +17,7 @@ https://www.youtube.com/watch?v=WhzIjYQmWvs
 ```
 web: node dist/index.js
 ```
-3. In your `package.json` add the following script to compile your project on Heroku:
+3. In your `package.json` add the following script to run the TypeScript compiler before Heroku runs your project:
 ```
 "heroku-postbuild": "tsc"
 ```
