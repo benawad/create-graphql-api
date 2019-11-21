@@ -14,14 +14,12 @@ const SQLiteStore = connectSqlite3(session);
 (async () => {
   const app = express();
 
-  const dbOptions = await getConnectionOptions(
-    process.env.NODE_ENV || "development"
-  );
-  await createConnection({ ...dbOptions, name: "default" });
-
   app.use(
     session({
-      store: new SQLiteStore({ db: dbOptions.database }),
+      store: new SQLiteStore({
+        db: "database.sqlite",
+        concurrentDB: true
+      }),
       name: "qid",
       secret: process.env.SESSION_SECRET || "aslkdfjoiq12312",
       resave: false,
@@ -33,6 +31,12 @@ const SQLiteStore = connectSqlite3(session);
       }
     })
   );
+
+  // get options from ormconfig.js
+  const dbOptions = await getConnectionOptions(
+    process.env.NODE_ENV || "development"
+  );
+  await createConnection({ ...dbOptions, name: "default" });
 
   const apolloServer = new ApolloServer({
     schema: await buildSchema({
