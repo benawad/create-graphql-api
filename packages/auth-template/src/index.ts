@@ -40,7 +40,8 @@ const SQLiteStore = connectSqlite3(session);
 
   const apolloServer = new ApolloServer({
     schema: await buildSchema({
-      resolvers: [AuthResolver, BookResolver]
+      resolvers: [AuthResolver, BookResolver],
+      validate: false
     }),
     context: ({ req, res }) => ({ req, res })
   });
