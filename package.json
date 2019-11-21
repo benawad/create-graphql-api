@@ -2,5 +2,9 @@
   "private": true,
   "workspaces": [
     "packages/*"
+  ],
+  "nohoist": [
+    "**/typeorm",
+    "**/typeorm/**"
   ]
 }

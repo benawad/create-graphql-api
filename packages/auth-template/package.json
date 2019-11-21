@@ -1,0 +1,30 @@
+{
+  "name": "myapi-with-auth",
+  "version": "0.0.1",
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "@types/express": "^4.17.2",
+    "@types/express-session": "^1.15.16",
+    "@types/node": "^12.12.8",
+    "nodemon": "^1.19.4",
+    "ts-node": "8.5.2",
+    "typescript": "3.7.2"
+  },
+  "dependencies": {
+    "apollo-server-express": "^2.9.9",
+    "bcryptjs": "^2.4.3",
+    "connect-sqlite3": "^0.9.11",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "graphql": "^14.5.8",
+    "pg": "^7.13.0",
+    "reflect-metadata": "^0.1.10",
+    "sqlite3": "^4.1.0",
+    "type-graphql": "^0.17.5",
+    "typeorm": "0.2.20"
+  },
+  "scripts": {
+    "start": "nodemon --exec ts-node --files src/index.ts",
+    "build": "tsc"
+  }
+}
