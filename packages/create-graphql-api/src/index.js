@@ -15,6 +15,7 @@ const program = new commander.Command(packageJson.name)
   .action(name => {
     projectName = name;
   })
+  .option("--auth", "use auth template")
   .parse(process.argv);
 
 if (typeof projectName === "undefined") {
@@ -41,7 +42,10 @@ if (fs.existsSync(projectDestination)) {
   process.exit(1);
 }
 
-fs.copySync(path.join(__dirname, "..", "main-template"), projectName);
+fs.copySync(
+  path.join(__dirname, "..", program.auth ? "auth-template" : "main-template"),
+  projectName
+);
 
 function shouldUseYarn() {
   try {

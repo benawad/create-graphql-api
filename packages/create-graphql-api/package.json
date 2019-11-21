@@ -10,9 +10,10 @@
     "url": "https://github.com/benawad/create-graphql-api/issues"
   },
   "homepage": "https://github.com/benawad/create-graphql-api#readme",
-  "version": "1.1.1",
+  "version": "1.2.2",
   "license": "MIT",
   "files": [
+    "auth-template",
     "main-template",
     "src/index.js"
   ],
@@ -20,8 +21,8 @@
     "create-graphql-api": "./src/index.js"
   },
   "scripts": {
-    "prepublishOnly": "cp -R ../main-template .",
-    "postpublish": "rm -rf main-template"
+    "prepublishOnly": "cp -R ../main-template . && cp -R ../auth-template .",
+    "postpublish": "rm -rf main-template auth-template"
   },
   "dependencies": {
     "chalk": "^3.0.0",
