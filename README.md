@@ -8,7 +8,17 @@ npm start
 
 ## Example
 
-https://www.youtube.com/watch?v=WhzIjYQmWvs
+Basic: https://www.youtube.com/watch?v=WhzIjYQmWvs
+
+Auth: https://www.youtube.com/watch?v=OVdPOExxKuU
+
+## Templates
+
+You can do the following for an auth template:
+
+```
+npx create-graphql-api my-api --auth
+```
 
 ## How to Deploy to Heroku
 
