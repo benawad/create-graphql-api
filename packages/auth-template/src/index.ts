@@ -43,7 +43,12 @@ const SQLiteStore = connectSqlite3(session);
       resolvers: [AuthResolver, BookResolver],
       validate: false
     }),
-    context: ({ req, res }) => ({ req, res })
+    context: ({ req, res }) => ({ req, res }),
+    playground: {
+      settings: {
+        "request.credentials": "include"
+      }
+    }
   });
 
   apolloServer.applyMiddleware({ app, cors: false });
