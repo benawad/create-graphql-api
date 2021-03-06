@@ -21,7 +21,6 @@ export class AuthResolver {
     @Arg("input")
     { email, password }: AuthInput
   ): Promise<UserResponse> {
-    const hashedPassword = await bcrypt.hash(password, 12);
 
     const existingUser = await User.findOne({ email });
 
@@ -35,7 +34,8 @@ export class AuthResolver {
         ]
       };
     }
-
+      
+    const hashedPassword = await bcrypt.hash(password, 12);
     const user = await User.create({
       email,
       password: hashedPassword
