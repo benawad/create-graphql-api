@@ -17,11 +17,11 @@
     "express": "^4.17.1",
     "express-session": "^1.17.0",
     "graphql": "^14.5.8",
-    "pg": "^7.13.0",
+    "pg": "8.0.3",
     "reflect-metadata": "^0.1.10",
     "sqlite3": "^4.1.0",
     "type-graphql": "^0.17.5",
-    "typeorm": "0.2.20"
+    "typeorm": "0.2.21"
   },
   "scripts": {
     "start": "nodemon --exec ts-node --files src/index.ts",
