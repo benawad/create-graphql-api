@@ -5,6 +5,12 @@ import { AuthInput } from "../graphql-types/AuthInput";
 import { MyContext } from "../graphql-types/MyContext";
 import { UserResponse } from "../graphql-types/UserResponse";
 
+declare module 'express-session' {
+  interface Session {
+      userId: number
+  }
+}
+
 const invalidLoginResponse = {
   errors: [
     {
