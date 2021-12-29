@@ -15,7 +15,7 @@
     "pg": "8.0.3",
     "reflect-metadata": "^0.1.10",
     "sqlite3": "^4.1.0",
-    "type-graphql": "^0.17.5",
+    "type-graphql": "^0.17.6",
     "typeorm": "0.2.21"
   },
   "scripts": {
