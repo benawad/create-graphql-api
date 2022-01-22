@@ -521,10 +521,10 @@ apollo-utilities@^1.0.1, apollo-utilities@^1.3.0:
     ts-invariant "^0.4.0"
     tslib "^1.9.3"
 
-app-root-path@^2.0.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/app-root-path/-/app-root-path-2.2.1.tgz#d0df4a682ee408273583d43f6f79e9892624bc9a"
-  integrity sha512-91IFKeKk7FjfmezPKkwtaRvSpnUc4gDwPAjA1YZ9Gn0q0PPeW+vbeUsZuyDwjI7+QTHhcLen2v25fi/AmhvbJA==
+app-root-path@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/app-root-path/-/app-root-path-3.0.0.tgz#210b6f43873227e18a4b810a032283311555d5ad"
+  integrity sha512-qMcx+Gy2UZynHjOHOIXPNvpf+9cjvk3cWrBBK7zg4gH9+clobJRb9NGzcT7mQTcV/6Gm/1WelUtqxVXnNlrwcw==
 
 aproba@^1.0.3:
   version "1.2.0"
@@ -2379,9 +2379,11 @@ negotiator@0.6.2:
   integrity sha512-hZXc7K2e+PgeI1eDBe/10Ard4ekbfrrqG8Ep+8Jmf4JID2bNg7NvCPOZN+kfF574pFQI7mum2AUqDidoKqcTOw==
 
 node-fetch@^2.1.2, node-fetch@^2.2.0:
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.0.tgz#e633456386d4aa55863f676a7ab0daa8fdecb0fd"
-  integrity sha512-8dG4H5ujfvFiqDmVu9fQ5bOHUC15JMjMY/Zumv26oOvvVJjM67KF8koCWIabKQ1GJIa9r2mMZscBq/TbdOcmNA==
+  version "2.6.7"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.7.tgz#24de9fba827e3b4ae44dc8b20256a379160052ad"
+  integrity sha512-ZjMPFEfVx5j+y2yF35Kzx5sF7kDzxuDj6ziH4FFbOp87zKDZNx8yExJIb05OGF4Nlt9IHFIMBkRl41VdvcNdbQ==
+  dependencies:
+    whatwg-url "^5.0.0"
 
 node-pre-gyp@^0.11.0:
   version "0.11.0"
@@ -2709,10 +2711,15 @@ pg-int8@1.0.1:
   resolved "https://registry.yarnpkg.com/pg-int8/-/pg-int8-1.0.1.tgz#943bd463bf5b71b4170115f80f8efc9a0c0eb78c"
   integrity sha512-WCtabS6t3c8SkpDBUlb1kjOs7l66xsGdKpIPZsg4wR+B3+u9UAum2odSsF9tnvxg80h4ZxLWMy4pRjOsFIqQpw==
 
-pg-pool@^2.0.7:
-  version "2.0.7"
-  resolved "https://registry.yarnpkg.com/pg-pool/-/pg-pool-2.0.7.tgz#f14ecab83507941062c313df23f6adcd9fd0ce54"
-  integrity sha512-UiJyO5B9zZpu32GSlP0tXy8J2NsJ9EFGFfz5v6PSbdz/1hBLX1rNiiy5+mAm5iJJYwfCv4A0EBcQLGWwjbpzZw==
+pg-pool@^3.1.1:
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/pg-pool/-/pg-pool-3.4.1.tgz#0e71ce2c67b442a5e862a9c182172c37eda71e9c"
+  integrity sha512-TVHxR/gf3MeJRvchgNHxsYsTCHQ+4wm3VIHSS19z8NC0+gioEhq1okDY1sm/TYbfoP6JLFx01s0ShvZ3puP/iQ==
+
+pg-protocol@^1.2.2:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/pg-protocol/-/pg-protocol-1.5.0.tgz#b5dd452257314565e2d54ab3c132adc46565a6a0"
+  integrity sha512-muRttij7H8TqRNu/DxrAJQITO4Ac7RmX3Klyr/9mJEOBeIpgnF8f9jAfRz5d3XwQZl5qBjF9gLsUtMPJE0vezQ==
 
 pg-types@^2.1.0:
   version "2.2.0"
@@ -2725,15 +2732,16 @@ pg-types@^2.1.0:
     postgres-date "~1.0.4"
     postgres-interval "^1.1.0"
 
-pg@^7.13.0:
-  version "7.13.0"
-  resolved "https://registry.yarnpkg.com/pg/-/pg-7.13.0.tgz#269bde5164818ea1165a65c1e3349bd947f5a4e1"
-  integrity sha512-ByCwYi39UrrPxu48WDPNj+osbhzFYe29EQpVyabfHZsfNfvXwQM/pZ86mRbJUlJf8J8GG3T36FjcKjSMmcjQfg==
+pg@8.0.3:
+  version "8.0.3"
+  resolved "https://registry.yarnpkg.com/pg/-/pg-8.0.3.tgz#b220ee468a1819e1c7e9ca9878f8ae50ba8e1952"
+  integrity sha512-fvcNXn4o/iq4jKq15Ix/e58q3jPSmzOp6/8C3CaHoSR/bsxdg+1FXfDRePdtE/zBb3++TytvOrS1hNef3WC/Kg==
   dependencies:
     buffer-writer "2.0.0"
     packet-reader "1.0.0"
     pg-connection-string "0.1.3"
-    pg-pool "^2.0.7"
+    pg-pool "^3.1.1"
+    pg-protocol "^1.2.2"
     pg-types "^2.1.0"
     pgpass "1.x"
     semver "4.3.2"
@@ -3470,6 +3478,11 @@ tough-cookie@~2.4.3:
     psl "^1.1.24"
     punycode "^1.4.1"
 
+tr46@~0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/tr46/-/tr46-0.0.3.tgz#8184fd347dac9cdc185992f3a6622e14b9d9ab6a"
+  integrity sha1-gYT9NH2snNwYWZLzpmIuFLnZq2o=
+
 ts-invariant@^0.4.0:
   version "0.4.4"
   resolved "https://registry.yarnpkg.com/ts-invariant/-/ts-invariant-0.4.4.tgz#97a523518688f93aafad01b0e80eb803eb2abd86"
@@ -3528,12 +3541,12 @@ type-is@^1.6.16, type-is@~1.6.17, type-is@~1.6.18:
     media-typer "0.3.0"
     mime-types "~2.1.24"
 
-typeorm@0.2.20:
-  version "0.2.20"
-  resolved "https://registry.yarnpkg.com/typeorm/-/typeorm-0.2.20.tgz#efb60f2e55a7d08fc365f281ec2a71c87a9ebba5"
-  integrity sha512-VxB+9qH8D+PM19MIx18Zs3Fqv/ZINnnQvUGmBEiLYDrB9etdSdamgSTCIhWdFNndeJ6ldH4jbD0Z6HWsepMPlA==
+typeorm@0.2.21:
+  version "0.2.21"
+  resolved "https://registry.yarnpkg.com/typeorm/-/typeorm-0.2.21.tgz#d8d63bec783c128913b140b52f65e9fd76e44510"
+  integrity sha512-4abj5aFjwt4Y+Gs3VmykcjURUZwIezwPWYVMNl2swRk8/iluGZZ9Lbwd4tdzJ7ZdsgKyHsT8zf8zPZPL5jH+EQ==
   dependencies:
-    app-root-path "^2.0.1"
+    app-root-path "^3.0.0"
     buffer "^5.1.0"
     chalk "^2.4.2"
     cli-highlight "^2.0.0"
@@ -3693,6 +3706,19 @@ verror@1.10.0:
     assert-plus "^1.0.0"
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
+
+webidl-conversions@^3.0.0:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/webidl-conversions/-/webidl-conversions-3.0.1.tgz#24534275e2a7bc6be7bc86611cc16ae0a5654871"
+  integrity sha1-JFNCdeKnvGvnvIZhHMFq4KVlSHE=
+
+whatwg-url@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/whatwg-url/-/whatwg-url-5.0.0.tgz#966454e8765462e37644d3626f6742ce8b70965d"
+  integrity sha1-lmRU6HZUYuN2RNNib2dCzotwll0=
+  dependencies:
+    tr46 "~0.0.3"
+    webidl-conversions "^3.0.0"
 
 which-module@^2.0.0:
   version "2.0.0"
